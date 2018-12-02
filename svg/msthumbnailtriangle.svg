@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 0 100 100" overflow="visible" enable-background="new 0 0 100 100" xml:space="preserve">
+  <style>
+    polygon {
+      stroke-width: 0.5;
+      fill: rgba(255,255,255,0.5);
+    }
+  </style>
+  <polygon points="50 30, 75 70, 25 70" stroke="rgba(255,255,255,0.5)"/>
+  <defs>
+    <!-- for image centralisation: draw triangle in reduced scale (scale factor is 2)
+      and normilize everything in css by increasing svg dimensions ("transform: scale(2)") -->
+    <polygon id="triangleTest"  points="0.5 0.3, 0.75 0.7, 0.25 0.7" />
+  </defs>
+  <clipPath id="clip1" clipPathUnits="objectBoundingBox">
+    <use xlink:href="#triangleTest" />
+  </clipPath>
+  <g transform="matrix(1 0 0 1 0 0)" clip-path="url(#clip1)">
+    <image width="100%" height="100%" xlink:href="dist/images/new-zealand-679068_1280.jpg" transform="matrix(1 0 0 1 0 0)">
+    </image>
+  </g>
+</svg>
